@@ -66,5 +66,41 @@ namespace Color.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        internal static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;&lt;.
+        /// </summary>
+        internal static string LeftArrows {
+            get {
+                return ResourceManager.GetString("LeftArrows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &gt;&gt;.
+        /// </summary>
+        internal static string RightArrows {
+            get {
+                return ResourceManager.GetString("RightArrows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Входная строка имела неверный формат.
+        /// </summary>
+        internal static string WrongFormat {
+            get {
+                return ResourceManager.GetString("WrongFormat", resourceCulture);
+            }
+        }
     }
 }

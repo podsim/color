@@ -237,12 +237,13 @@
             this.contMSNotifyIcon.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.contMSNotifyIcon.Name = "contMSNotifyIcon";
-            this.contMSNotifyIcon.Size = new System.Drawing.Size(93, 26);
+            this.contMSNotifyIcon.Size = new System.Drawing.Size(104, 26);
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = global::Color.Properties.Resources.delete;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
             // 

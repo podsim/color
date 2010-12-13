@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
+using Color.Properties;
 
 namespace Color
 {
@@ -176,7 +177,7 @@ namespace Color
                 r = 0;
                 g = 0;
                 b = 0;
-                MessageBox.Show("Входная строка имела неверный формат", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Resources.WrongFormat, Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             CanEditInfo(true);
@@ -187,7 +188,7 @@ namespace Color
 
         private void BtnListVisibleClick(object sender, EventArgs e)
         {
-            if (btnListVisible.Text == ">>")
+            if (btnListVisible.Text == Resources.RightArrows)
                 ShowList();
             else
                 HideList();
@@ -250,7 +251,7 @@ namespace Color
             btnAddColor.Visible = true;
             btnDelColor.Visible = true;
             label1.Visible = true;
-            btnListVisible.Text = "<<";
+            btnListVisible.Text = Resources.LeftArrows;
         }
 
         private void HideList()
@@ -260,7 +261,7 @@ namespace Color
             btnAddColor.Visible = false;
             btnDelColor.Visible = false;
             label1.Visible = false;
-            btnListVisible.Text = ">>";
+            btnListVisible.Text = Resources.RightArrows;
         }
 
         private void LoadHistory()
@@ -280,12 +281,8 @@ namespace Color
         private void SaveHistory()
         {
             using (var rd = File.CreateText(string.Format("{0}\\{1}", Application.StartupPath, "History.dat")))
-            {
                 foreach (var item in _history)
-                {
                     rd.WriteLine(item);
-                }
-            }
         }
 
         private void BtnAddColorClick(object sender, EventArgs e)
