@@ -1,0 +1,1 @@
+gets color from mouse cursor :)
